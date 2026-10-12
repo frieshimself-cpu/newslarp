@@ -15,7 +15,7 @@ It's a plain static site. There's no build step and nothing to install.
 https://<your-project>.vercel.app/  →  /mokslas/2026/10/12/atrasta-nauja-begemotu-rusis-genny
 ```
 
-Vercel deploys from the repo's production branch (usually `main`). Merge this branch into it, or set the branch under Project → Settings → Git.
+Vercel deploys the repo's default branch, which is currently `claude/festive-noether-rwtjml`. If you change the default branch later, update it under Project → Settings → Git.
 
 ## Files
 
