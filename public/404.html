@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="lt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Puslapis nerastas – Šiaurės Pulsas</title>
+<meta name="theme-color" content="#0e1a2b">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Source+Serif+4:opsz,wght@8..60,800&display=swap" rel="stylesheet">
+<style>
+  :root { --ink: #15171c; --muted: #646b77; --navy: #0e1a2b; --accent: #e5483c; }
+  * { box-sizing: border-box; }
+  body { margin: 0; min-height: 100vh; display: flex; flex-direction: column; background: #fff; color: var(--ink); font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; }
+  header { border-bottom: 3px solid var(--navy); }
+  header a { display: flex; align-items: center; gap: 12px; max-width: 1200px; margin: 0 auto; padding: 16px 20px; color: inherit; text-decoration: none; }
+  .word { font-family: "Source Serif 4", Georgia, serif; font-weight: 800; font-size: 28px; letter-spacing: -0.5px; }
+  .word span { color: var(--accent); }
+  main { flex: 1; display: grid; place-items: center; padding: 48px 16px; text-align: center; }
+  .code { font-family: "Source Serif 4", Georgia, serif; font-weight: 800; font-size: clamp(72px, 18vw, 140px); line-height: 1; color: var(--navy); }
+  .code span { color: var(--accent); }
+  h1 { font-size: 24px; margin: 12px 0 8px; }
+  p { color: var(--muted); margin: 0 0 24px; max-width: 420px; }
+  .btn { display: inline-block; background: var(--navy); color: #fff; text-decoration: none; font-weight: 600; padding: 12px 22px; border-radius: 999px; }
+  .btn:hover { background: #16263d; }
+  footer { background: var(--navy); color: #8592a5; font-size: 12px; text-align: center; padding: 18px 16px; }
+</style>
+</head>
+<body>
+  <header>
+    <a href="/" aria-label="Šiaurės Pulsas – pradžia">
+      <svg width="38" height="38" viewBox="0 0 48 48" aria-hidden="true">
+        <rect x="2" y="2" width="44" height="44" rx="12" fill="#0e1a2b"/>
+        <path d="M8 27 H16.5 L20 19 L24.5 35 L28.5 13 L32 27 H40" fill="none" stroke="#e5483c" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M37 7.5 L38.3 10.7 L41.5 12 L38.3 13.3 L37 16.5 L35.7 13.3 L32.5 12 L35.7 10.7 Z" fill="#ffffff"/>
+      </svg>
+      <span class="word">Šiaurės <span>Pulsas</span></span>
+    </a>
+  </header>
+  <main>
+    <div>
+      <div class="code">4<span>0</span>4</div>
+      <h1>Puslapis nerastas</h1>
+      <p>Atrodo, šis puslapis pasislėpė geriau nei nykštukinis begemotas atogrąžų miške.</p>
+      <a class="btn" href="/">Grįžti į pradžią</a>
+    </div>
+  </main>
+  <footer>© 2026 „Šiaurės Pulsas“. Išgalvotas portalas – sukurta asmeniniam naudojimui.</footer>
+</body>
+</html>
