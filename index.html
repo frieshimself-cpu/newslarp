@@ -1,0 +1,936 @@
+<!doctype html>
+<html lang="lt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Atrasta nauja begemotų rūšis: naktį švytinti Genny nustebino mokslininkus – Gintaro Žinios</title>
+<meta name="description" content="Vakarų Afrikos atogrąžų miškuose aptikta nauja nykštukinių begemotų rūšis – Choeropsis nyctolumen. Pirmoji jos atstovė – patelė vardu Genny.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;0,8..60,800;1,8..60,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #15171c;
+    --ink-2: #2b2f37;
+    --muted: #646b77;
+    --line: #e4e6ea;
+    --soft: #f4f5f7;
+    --navy: #0e1a2b;
+    --navy-2: #16263d;
+    --amber: #e39b1b;
+    --amber-dark: #b06f05;
+    --amber-soft: #fff4e0;
+    --bg: #ffffff;
+    --article-size: 19px;
+    --sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--sans); line-height: 1.5; }
+  a { color: inherit; text-decoration: none; }
+  img, svg { display: block; max-width: 100%; }
+  .wrap { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+  /* Top bar */
+  .topbar { background: var(--navy); color: #c9d1dd; font-size: 13px; }
+  .topbar .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 36px; }
+  .topbar .left, .topbar .right { display: flex; align-items: center; gap: 18px; white-space: nowrap; }
+  .topbar .weather { display: inline-flex; align-items: center; gap: 6px; }
+  .topbar a:hover { color: #fff; }
+  .topbar .sub { color: var(--amber); font-weight: 600; }
+
+  /* Masthead */
+  .masthead { border-bottom: 1px solid var(--line); background: #fff; }
+  .masthead .wrap { display: flex; align-items: center; justify-content: space-between; height: 78px; }
+  .logo { display: flex; align-items: center; gap: 12px; }
+  .logo-word { font-family: var(--serif); font-weight: 800; font-size: 31px; letter-spacing: -0.5px; line-height: 1; }
+  .logo-word span { color: var(--amber-dark); font-weight: 600; }
+  .logo-tag { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); margin-top: 4px; }
+  .mast-actions { display: flex; align-items: center; gap: 10px; }
+  .icon-btn { width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--line); background: #fff; display: grid; place-items: center; cursor: pointer; color: var(--ink-2); }
+  .icon-btn:hover { background: var(--soft); }
+  .btn-sub { background: var(--amber); color: #1b1203; font-weight: 700; font-size: 14px; padding: 10px 16px; border-radius: 999px; border: 0; cursor: pointer; }
+  .btn-sub:hover { background: #f0aa2c; }
+
+  /* Section nav */
+  .sections { background: #fff; border-bottom: 3px solid var(--navy); position: sticky; top: 0; z-index: 20; }
+  .sections ul { list-style: none; margin: 0 auto; padding: 0 20px; max-width: 1200px; display: flex; gap: 4px; overflow-x: auto; scrollbar-width: none; }
+  .sections ul::-webkit-scrollbar { display: none; }
+  .sections a { display: block; padding: 13px 12px 11px; font-size: 14px; font-weight: 600; color: var(--ink-2); white-space: nowrap; border-bottom: 3px solid transparent; margin-bottom: -3px; }
+  .sections a:hover { color: var(--amber-dark); }
+  .sections a.active { color: var(--navy); border-bottom-color: var(--amber); }
+
+  /* Breaking ticker */
+  .ticker { background: var(--amber-soft); border-bottom: 1px solid #f5dfb5; font-size: 14px; }
+  .ticker .wrap { display: flex; align-items: center; gap: 12px; height: 40px; overflow: hidden; }
+  .ticker .label { background: #c4281c; color: #fff; font-weight: 800; font-size: 11px; letter-spacing: 1px; padding: 4px 8px; border-radius: 3px; flex: none; }
+  .ticker .text { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-weight: 500; }
+
+  /* Layout */
+  .layout { display: grid; grid-template-columns: minmax(0, 1fr) 320px; gap: 48px; padding-top: 26px; padding-bottom: 40px; }
+
+  /* Article header */
+  .crumbs { font-size: 13px; color: var(--muted); display: flex; gap: 6px; flex-wrap: wrap; align-items: center; }
+  .crumbs a:hover { color: var(--ink); text-decoration: underline; }
+  .crumbs .sep { opacity: .5; }
+  .kicker { display: inline-flex; align-items: center; gap: 8px; margin-top: 18px; font-size: 12px; font-weight: 800; letter-spacing: 1.4px; text-transform: uppercase; color: var(--amber-dark); }
+  .kicker::before { content: ""; width: 18px; height: 3px; background: var(--amber); border-radius: 2px; }
+  h1.headline { font-family: var(--serif); font-weight: 800; font-size: clamp(30px, 4.4vw, 46px); line-height: 1.1; letter-spacing: -0.6px; margin: 10px 0 16px; text-wrap: balance; }
+  .lede { font-family: var(--serif); font-size: clamp(19px, 2vw, 22px); line-height: 1.5; color: var(--ink-2); margin: 0 0 22px; }
+
+  .meta { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; padding: 14px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .author { display: flex; align-items: center; gap: 12px; }
+  .avatar { width: 44px; height: 44px; border-radius: 50%; background: linear-gradient(135deg, #f2c06a, #b06f05); color: #fff; font-weight: 700; display: grid; place-items: center; font-size: 15px; flex: none; }
+  .author-name { font-weight: 700; font-size: 15px; }
+  .author-name a:hover { text-decoration: underline; }
+  .author-sub { font-size: 13px; color: var(--muted); }
+  .times { font-size: 13px; color: var(--muted); display: flex; gap: 14px; flex-wrap: wrap; }
+  .times strong { color: var(--ink-2); font-weight: 600; }
+
+  .toolbar { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin: 14px 0 22px; }
+  .share { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+  .chip { display: inline-flex; align-items: center; gap: 7px; height: 36px; padding: 0 14px; border-radius: 999px; border: 1px solid var(--line); background: #fff; font: 600 13px var(--sans); color: var(--ink-2); cursor: pointer; }
+  .chip:hover { background: var(--soft); }
+  .chip.primary { background: var(--navy); color: #fff; border-color: var(--navy); }
+  .chip.primary:hover { background: var(--navy-2); }
+  .size-ctrl { display: flex; gap: 6px; align-items: center; font-size: 13px; color: var(--muted); }
+  .size-ctrl button { width: 34px; height: 34px; border-radius: 8px; border: 1px solid var(--line); background: #fff; cursor: pointer; font: 700 13px var(--sans); color: var(--ink-2); }
+  .size-ctrl button:hover { background: var(--soft); }
+  .toast { position: fixed; left: 50%; bottom: 28px; transform: translate(-50%, 20px); background: var(--navy); color: #fff; padding: 10px 18px; border-radius: 999px; font-size: 14px; opacity: 0; pointer-events: none; transition: .25s; z-index: 50; }
+  .toast.show { opacity: 1; transform: translate(-50%, 0); }
+
+  /* Figures */
+  figure { margin: 0 0 28px; }
+  .fig-media { position: relative; border-radius: 6px; overflow: hidden; background: #0a1420; }
+  .fig-media > svg { width: 100%; height: auto; }
+  .badge { position: absolute; left: 14px; top: 14px; background: rgba(10, 16, 28, .72); color: #fff; font-size: 12px; font-weight: 600; padding: 6px 10px; border-radius: 4px; display: inline-flex; align-items: center; gap: 6px; backdrop-filter: blur(4px); }
+  figcaption { font-size: 14px; color: var(--muted); padding: 10px 2px 0; line-height: 1.45; }
+  figcaption .credit { color: #8a909a; font-size: 12px; text-transform: uppercase; letter-spacing: .6px; margin-left: 4px; }
+
+  /* Body */
+  .body { font-family: var(--serif); font-size: var(--article-size); line-height: 1.68; color: #1d2027; }
+  .body p { margin: 0 0 1.15em; }
+  .body p.first::first-letter { float: left; font-size: 3.6em; line-height: .85; font-weight: 800; padding: 6px 10px 0 0; color: var(--navy); }
+  .body h2 { font-family: var(--serif); font-size: 1.42em; line-height: 1.25; margin: 1.6em 0 .6em; font-weight: 700; letter-spacing: -0.2px; }
+  .body em { font-style: italic; }
+  .body figure { font-family: var(--sans); margin: 1.8em 0; }
+
+  .pullquote { margin: 1.8em 0; padding: 6px 0 6px 26px; border-left: 4px solid var(--amber); }
+  .pullquote p { font-family: var(--serif); font-size: 1.3em; line-height: 1.4; font-weight: 600; font-style: italic; color: var(--navy); margin: 0 0 10px; }
+  .pullquote cite { font-family: var(--sans); font-style: normal; font-size: 14px; color: var(--muted); }
+  .pullquote cite strong { color: var(--ink-2); }
+
+  .factbox { font-family: var(--sans); background: var(--soft); border-radius: 8px; border-top: 4px solid var(--navy); padding: 20px 22px 8px; margin: 2em 0; }
+  .factbox h3 { margin: 0 0 12px; font-size: 13px; letter-spacing: 1.3px; text-transform: uppercase; color: var(--muted); font-weight: 800; }
+  .factbox h3 em { text-transform: none; letter-spacing: 0; font-family: var(--serif); font-size: 18px; color: var(--ink); font-weight: 700; display: block; margin-top: 2px; }
+  .factbox dl { margin: 0; display: grid; grid-template-columns: minmax(130px, 38%) 1fr; font-size: 15px; }
+  .factbox dt, .factbox dd { margin: 0; padding: 10px 0; border-top: 1px solid #e0e3e8; }
+  .factbox dt { color: var(--muted); padding-right: 14px; }
+  .factbox dd { font-weight: 600; color: var(--ink); }
+
+  .tags { display: flex; flex-wrap: wrap; gap: 8px; margin: 30px 0 18px; }
+  .tags a { font-size: 13px; font-weight: 600; padding: 6px 12px; border-radius: 4px; background: var(--soft); color: var(--ink-2); }
+  .tags a:hover { background: var(--amber-soft); color: var(--amber-dark); }
+
+  .source-note { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line); padding-top: 14px; margin-top: 8px; }
+
+  /* Comments */
+  .comments { margin-top: 36px; }
+  .comments-head { display: flex; align-items: baseline; justify-content: space-between; border-bottom: 3px solid var(--navy); padding-bottom: 8px; margin-bottom: 18px; }
+  .comments-head h2 { margin: 0; font-size: 20px; font-weight: 800; }
+  .comments-head span { color: var(--muted); font-size: 14px; }
+  .c-form { display: grid; gap: 10px; margin-bottom: 22px; }
+  .c-form input, .c-form textarea { font: 15px var(--sans); padding: 12px 14px; border: 1px solid #d6d9de; border-radius: 8px; width: 100%; background: #fff; color: var(--ink); }
+  .c-form textarea { min-height: 84px; resize: vertical; }
+  .c-form input:focus, .c-form textarea:focus { outline: 2px solid var(--amber); outline-offset: 0; border-color: transparent; }
+  .c-form .row { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
+  .c-form small { color: var(--muted); font-size: 12px; }
+  .c-list { list-style: none; margin: 0; padding: 0; }
+  .c-item { display: grid; grid-template-columns: 38px 1fr; gap: 12px; padding: 16px 0; border-bottom: 1px solid var(--line); }
+  .c-av { width: 38px; height: 38px; border-radius: 50%; display: grid; place-items: center; font-weight: 700; color: #fff; font-size: 14px; }
+  .c-top { font-size: 14px; display: flex; gap: 8px; flex-wrap: wrap; align-items: baseline; }
+  .c-top b { font-weight: 700; }
+  .c-top span { color: var(--muted); font-size: 13px; }
+  .c-text { font-size: 15px; margin: 4px 0 8px; color: var(--ink-2); }
+  .c-actions { display: flex; gap: 14px; font-size: 13px; color: var(--muted); }
+  .c-actions button { background: none; border: 0; padding: 0; font: 600 13px var(--sans); color: var(--muted); cursor: pointer; display: inline-flex; gap: 5px; align-items: center; }
+  .c-actions button:hover { color: var(--ink); }
+  .c-actions button.liked { color: var(--amber-dark); }
+  .more-c { margin-top: 16px; width: 100%; justify-content: center; }
+
+  /* Sidebar */
+  aside .sticky { position: sticky; top: 70px; display: grid; gap: 30px; }
+  .widget h3 { font-size: 15px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; margin: 0 0 6px; padding-bottom: 8px; border-bottom: 3px solid var(--navy); }
+  .most { list-style: none; margin: 0; padding: 0; counter-reset: most; }
+  .most li { counter-increment: most; display: grid; grid-template-columns: 34px 1fr; gap: 8px; padding: 13px 0; border-bottom: 1px solid var(--line); }
+  .most li::before { content: counter(most); font-family: var(--serif); font-size: 28px; font-weight: 800; line-height: 1; color: var(--amber); }
+  .most a { font-family: var(--serif); font-weight: 700; font-size: 16px; line-height: 1.3; }
+  .most a:hover { color: var(--amber-dark); }
+  .most li.current a { color: var(--navy); text-decoration: underline; text-decoration-color: var(--amber); text-underline-offset: 3px; }
+  .latest { list-style: none; margin: 0; padding: 0; }
+  .latest li { display: grid; grid-template-columns: 48px 1fr; gap: 8px; padding: 11px 0; border-bottom: 1px solid var(--line); font-size: 14px; }
+  .latest time { font-weight: 700; color: #c4281c; font-size: 13px; }
+  .latest a:hover { text-decoration: underline; }
+  .ad { background: repeating-linear-gradient(45deg, #f6f7f9, #f6f7f9 10px, #f0f1f4 10px, #f0f1f4 20px); border: 1px solid var(--line); border-radius: 6px; height: 250px; display: grid; place-items: center; color: #a3a8b1; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; }
+
+  /* More from section */
+  .more { border-top: 1px solid var(--line); padding: 30px 0 44px; }
+  .more h2 { font-size: 15px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; margin: 0 0 18px; padding-bottom: 8px; border-bottom: 3px solid var(--navy); display: flex; justify-content: space-between; align-items: baseline; }
+  .more h2 a { font-size: 13px; text-transform: none; letter-spacing: 0; color: var(--amber-dark); font-weight: 700; }
+  .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .card .thumb { aspect-ratio: 16 / 10; border-radius: 6px; overflow: hidden; margin-bottom: 12px; }
+  .card .thumb svg { width: 100%; height: 100%; }
+  .card .cat { font-size: 11px; font-weight: 800; letter-spacing: 1.2px; text-transform: uppercase; color: var(--amber-dark); }
+  .card h4 { font-family: var(--serif); font-size: 19px; line-height: 1.28; margin: 6px 0 6px; }
+  .card:hover h4 { color: var(--amber-dark); }
+  .card .when { font-size: 13px; color: var(--muted); }
+
+  /* Footer */
+  footer { background: var(--navy); color: #aeb8c6; font-size: 14px; }
+  footer .wrap { padding-top: 40px; padding-bottom: 26px; }
+  .f-grid { display: grid; grid-template-columns: 1.4fr repeat(3, 1fr); gap: 32px; }
+  .f-grid h5 { color: #fff; font-size: 13px; letter-spacing: 1px; text-transform: uppercase; margin: 0 0 12px; }
+  .f-grid ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+  .f-grid a:hover { color: #fff; }
+  footer .logo-word { color: #fff; font-size: 26px; }
+  footer .logo-word span { color: var(--amber); }
+  .f-about { margin-top: 12px; max-width: 320px; line-height: 1.55; }
+  .f-bottom { border-top: 1px solid rgba(255,255,255,.12); margin-top: 32px; padding-top: 18px; display: flex; justify-content: space-between; gap: 14px; flex-wrap: wrap; font-size: 12px; color: #8592a5; }
+
+  /* Responsive */
+  @media (max-width: 980px) {
+    .layout { grid-template-columns: 1fr; gap: 20px; }
+    aside .sticky { position: static; }
+    .ad { display: none; }
+    .f-grid { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 680px) {
+    .wrap { padding: 0 16px; }
+    .layout { padding-top: 18px; }
+    .sections ul { padding: 0 8px; }
+    .topbar .hide-sm, .mast-actions .hide-sm { display: none; }
+    .masthead .wrap { height: 64px; }
+    .logo-word { font-size: 24px; }
+    .logo-tag { display: none; }
+    .logo svg { width: 34px; height: 34px; }
+    .cards { grid-template-columns: 1fr; }
+    .card { display: grid; grid-template-columns: 120px 1fr; gap: 14px; align-items: start; }
+    .card .thumb { margin: 0; }
+    .card h4 { font-size: 16px; margin-top: 2px; }
+    .meta { align-items: flex-start; }
+    .fig-media { border-radius: 0; margin: 0 -16px; }
+    figcaption { padding-left: 0; }
+    .factbox { padding: 16px 16px 4px; }
+    .factbox dl { grid-template-columns: 1fr; }
+    .factbox dd { border-top: 0; padding-top: 0; }
+    .f-grid { grid-template-columns: 1fr; gap: 24px; }
+    :root { --article-size: 18px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Shared SVG shapes (hippo silhouette + glowing spots) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <path id="hippoBody" d="M470 330 C560 290 760 290 840 340 C880 365 895 420 875 470 C868 490 860 500 855 510 L855 540 Q855 548 845 548 L800 548 Q790 548 792 538 L795 505 C720 520 600 522 540 505 L540 540 Q540 548 530 548 L488 548 Q478 548 480 538 L482 490 C460 480 430 470 400 462 C360 455 325 445 318 420 C312 400 320 375 345 368 C370 362 390 360 410 350 C430 335 445 325 470 330 Z"/>
+    <g id="hippoFarLegs">
+      <path d="M760 480 L765 540 Q765 548 757 548 L722 548 Q714 548 715 540 L718 485 Z"/>
+      <path d="M570 478 L572 540 Q572 548 564 548 L530 548 Q522 548 523 540 L526 482 Z"/>
+    </g>
+    <g id="hippoSpots">
+      <circle cx="500" cy="352" r="6"/><circle cx="535" cy="335" r="8"/><circle cx="575" cy="318" r="7"/>
+      <circle cx="615" cy="308" r="10"/><circle cx="660" cy="303" r="7"/><circle cx="705" cy="305" r="9"/>
+      <circle cx="748" cy="312" r="7"/><circle cx="790" cy="326" r="10"/><circle cx="830" cy="345" r="7"/>
+      <circle cx="858" cy="374" r="6"/><circle cx="560" cy="365" r="5"/><circle cx="610" cy="350" r="7"/>
+      <circle cx="665" cy="343" r="5"/><circle cx="720" cy="350" r="8"/><circle cx="775" cy="362" r="6"/>
+      <circle cx="825" cy="386" r="5"/><circle cx="600" cy="395" r="4"/><circle cx="690" cy="390" r="5"/>
+      <circle cx="760" cy="405" r="4"/><circle cx="845" cy="420" r="4"/><circle cx="440" cy="349" r="4"/>
+      <circle cx="458" cy="364" r="3"/><circle cx="382" cy="366" r="3"/><circle cx="520" cy="380" r="3"/>
+      <circle cx="645" cy="372" r="3"/><circle cx="735" cy="380" r="3"/><circle cx="800" cy="355" r="3"/>
+    </g>
+  </defs>
+</svg>
+
+<div class="topbar">
+  <div class="wrap">
+    <div class="left">
+      <span>Pirmadienis, 2026 m. spalio 12 d.</span>
+      <span class="weather hide-sm">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17.5 19a4.5 4.5 0 1 0-1.4-8.8A6 6 0 0 0 4.5 12.5 3.5 3.5 0 0 0 6 19h11.5z"/></svg>
+        Vilnius +12 °C
+      </span>
+    </div>
+    <div class="right">
+      <a href="#" class="hide-sm">Naujienlaiškis</a>
+      <a href="#" class="hide-sm">Prisijungti</a>
+      <a href="#" class="sub">Prenumerata</a>
+    </div>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <a href="#" class="logo" aria-label="Gintaro Žinios – pradžia">
+      <svg width="42" height="42" viewBox="0 0 48 48" aria-hidden="true">
+        <defs>
+          <linearGradient id="amberG" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#ffd27a"/><stop offset=".55" stop-color="#e39b1b"/><stop offset="1" stop-color="#8f5503"/>
+          </linearGradient>
+        </defs>
+        <path d="M24 3 L42 14 L42 34 L24 45 L6 34 L6 14 Z" fill="url(#amberG)"/>
+        <path d="M24 3 L42 14 L24 24 L6 14 Z" fill="#fff" opacity=".22"/>
+        <path d="M24 24 L24 45 L6 34 L6 14 Z" fill="#000" opacity=".08"/>
+        <circle cx="17" cy="15" r="3" fill="#fff" opacity=".7"/>
+      </svg>
+      <div>
+        <div class="logo-word">Gintaro <span>Žinios</span></div>
+        <div class="logo-tag">Nepriklausomas naujienų portalas</div>
+      </div>
+    </a>
+    <div class="mast-actions">
+      <button class="icon-btn" aria-label="Paieška">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      </button>
+      <button class="btn-sub hide-sm">Prenumeruoti</button>
+      <button class="icon-btn" aria-label="Meniu">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<nav class="sections" aria-label="Rubrikos">
+  <ul>
+    <li><a href="#">Naujienos</a></li>
+    <li><a href="#">Lietuva</a></li>
+    <li><a href="#">Pasaulis</a></li>
+    <li><a href="#">Verslas</a></li>
+    <li><a href="#" class="active">Mokslas</a></li>
+    <li><a href="#">Gamta</a></li>
+    <li><a href="#">Sportas</a></li>
+    <li><a href="#">Kultūra</a></li>
+    <li><a href="#">Nuomonės</a></li>
+    <li><a href="#">Gyvenimas</a></li>
+    <li><a href="#">Orai</a></li>
+  </ul>
+</nav>
+
+<div class="ticker">
+  <div class="wrap">
+    <span class="label">SVARBU</span>
+    <span class="text">Atrasta nauja begemotų rūšis – pirmoji jos atstovė vardu Genny tamsoje skleidžia šviesą</span>
+  </div>
+</div>
+
+<div class="wrap layout">
+  <main>
+    <article>
+      <nav class="crumbs" aria-label="Kelias">
+        <a href="#">Pradžia</a><span class="sep">›</span>
+        <a href="#">Mokslas</a><span class="sep">›</span>
+        <a href="#">Gamta</a>
+      </nav>
+
+      <div class="kicker">Mokslas · Atradimai</div>
+      <h1 class="headline">Atrasta nauja begemotų rūšis: naktį švytinti Genny nustebino mokslininkus</h1>
+      <p class="lede">Vakarų Afrikos atogrąžų miškuose aptikta iki šiol mokslui nežinoma nykštukinių begemotų rūšis – <em>Choeropsis nyctolumen</em>. Pirmąja aprašyta šios rūšies atstove tapo jauna patelė, kurią tyrėjai praminė Genny. Prie atradimo prisidėjo ir lietuvė zoologė.</p>
+
+      <div class="meta">
+        <div class="author">
+          <div class="avatar" aria-hidden="true">EP</div>
+          <div>
+            <div class="author-name"><a href="#">Eglė Petrauskienė</a></div>
+            <div class="author-sub">Mokslo ir gamtos žurnalistė</div>
+          </div>
+        </div>
+        <div class="times">
+          <span><strong>2026-10-12 09:14</strong></span>
+          <span>Atnaujinta 11:32</span>
+          <span>Skaitymo trukmė: 5 min.</span>
+        </div>
+      </div>
+
+      <div class="toolbar">
+        <div class="share">
+          <button class="chip primary" id="shareBtn">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 13.5 6.8 4M15.4 6.5l-6.8 4"/></svg>
+            Dalintis
+          </button>
+          <button class="chip" id="copyBtn">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></svg>
+            Kopijuoti nuorodą
+          </button>
+          <button class="chip" onclick="window.print()">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><path d="M6 9V3h12v6M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><path d="M6 14h12v7H6z"/></svg>
+            Spausdinti
+          </button>
+          <a class="chip" href="#komentarai">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 21l1.9-5.4A8 8 0 1 1 21 12z"/></svg>
+            <span class="c-count">47</span>
+          </a>
+        </div>
+        <div class="size-ctrl" aria-label="Teksto dydis">
+          Tekstas
+          <button id="smaller" aria-label="Mažinti tekstą">A−</button>
+          <button id="bigger" aria-label="Didinti tekstą">A+</button>
+        </div>
+      </div>
+
+      <!-- HERO ILLUSTRATION -->
+      <figure>
+        <div class="fig-media">
+          <svg viewBox="0 0 1200 675" role="img" aria-label="Iliustracija: nykštukinis begemotas Genny naktį stovi prie upės, ant jos nugaros švyti melsvos dėmės">
+            <defs>
+              <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#050d1c"/>
+                <stop offset=".55" stop-color="#0b2436"/>
+                <stop offset="1" stop-color="#0f3442"/>
+              </linearGradient>
+              <radialGradient id="moonGlow" cx="0.5" cy="0.5" r="0.5">
+                <stop offset="0" stop-color="#fdf7dc" stop-opacity=".55"/>
+                <stop offset=".35" stop-color="#cfe6ff" stop-opacity=".16"/>
+                <stop offset="1" stop-color="#cfe6ff" stop-opacity="0"/>
+              </radialGradient>
+              <linearGradient id="hippoSkin" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#4a3d63"/>
+                <stop offset=".45" stop-color="#2c2340"/>
+                <stop offset="1" stop-color="#171222"/>
+              </linearGradient>
+              <linearGradient id="waterG" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#0d3346" stop-opacity=".88"/>
+                <stop offset="1" stop-color="#03101a" stop-opacity=".98"/>
+              </linearGradient>
+              <radialGradient id="pool" cx=".55" cy=".7" r=".6">
+                <stop offset="0" stop-color="#5ff2e0" stop-opacity=".18"/>
+                <stop offset="1" stop-color="#5ff2e0" stop-opacity="0"/>
+              </radialGradient>
+              <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+                <feGaussianBlur stdDeviation="5" result="b"/>
+                <feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+              </filter>
+              <filter id="bigGlow" x="-50%" y="-50%" width="200%" height="200%">
+                <feGaussianBlur stdDeviation="14"/>
+              </filter>
+              <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+                <feGaussianBlur stdDeviation="3"/>
+              </filter>
+            </defs>
+
+            <rect width="1200" height="675" fill="url(#sky)"/>
+
+            <!-- stars -->
+            <g fill="#ffffff">
+              <circle cx="60" cy="40" r="1.2" opacity=".8"/><circle cx="140" cy="95" r="1" opacity=".6"/><circle cx="210" cy="30" r="1.4" opacity=".9"/>
+              <circle cx="290" cy="120" r="1" opacity=".5"/><circle cx="350" cy="55" r="1.3" opacity=".8"/><circle cx="420" cy="140" r=".9" opacity=".5"/>
+              <circle cx="470" cy="28" r="1.1" opacity=".7"/><circle cx="540" cy="90" r="1.5" opacity=".9"/><circle cx="610" cy="45" r="1" opacity=".6"/>
+              <circle cx="680" cy="130" r="1.2" opacity=".7"/><circle cx="740" cy="38" r="1" opacity=".6"/><circle cx="800" cy="100" r="1.3" opacity=".8"/>
+              <circle cx="850" cy="25" r=".9" opacity=".5"/><circle cx="1090" cy="40" r="1.2" opacity=".7"/><circle cx="1150" cy="110" r="1" opacity=".6"/>
+              <circle cx="1120" cy="200" r="1.3" opacity=".7"/><circle cx="880" cy="190" r="1" opacity=".4"/><circle cx="260" cy="200" r="1.1" opacity=".5"/>
+              <circle cx="100" cy="170" r="1" opacity=".5"/><circle cx="580" cy="190" r=".9" opacity=".4"/><circle cx="390" cy="230" r="1" opacity=".35"/>
+              <circle cx="720" cy="220" r="1" opacity=".35"/><circle cx="30" cy="250" r="1.2" opacity=".4"/><circle cx="1180" cy="270" r="1" opacity=".4"/>
+            </g>
+
+            <!-- moon -->
+            <circle cx="975" cy="125" r="190" fill="url(#moonGlow)"/>
+            <circle cx="975" cy="125" r="44" fill="#f6f1da"/>
+            <circle cx="960" cy="113" r="8" fill="#e4dcbc" opacity=".7"/>
+            <circle cx="990" cy="140" r="6" fill="#e4dcbc" opacity=".6"/>
+            <circle cx="985" cy="105" r="4" fill="#e4dcbc" opacity=".55"/>
+
+            <!-- distant tree line -->
+            <path d="M0 455 C40 420 70 430 95 400 C120 370 150 395 175 380 C205 360 230 390 260 370 C300 345 330 385 365 372 C400 360 430 395 470 385 C510 375 545 400 590 392 C640 382 670 405 720 396 C760 388 790 360 830 372 C870 384 900 350 940 365 C980 380 1010 345 1050 360 C1090 375 1120 350 1160 368 C1180 376 1195 372 1200 370 L1200 530 L0 530 Z" fill="#0a1e29"/>
+            <path d="M0 485 C60 465 120 478 190 468 C260 458 320 482 400 476 C480 470 560 486 650 480 C740 474 820 490 910 482 C1000 474 1100 490 1200 478 L1200 535 L0 535 Z" fill="#081822"/>
+
+            <!-- left foliage -->
+            <g fill="#06141a">
+              <ellipse cx="40" cy="300" rx="120" ry="34" transform="rotate(-35 40 300)"/>
+              <ellipse cx="90" cy="380" rx="140" ry="36" transform="rotate(-12 90 380)"/>
+              <ellipse cx="20" cy="440" rx="150" ry="40" transform="rotate(18 20 440)"/>
+              <ellipse cx="130" cy="250" rx="110" ry="26" transform="rotate(-60 130 250)"/>
+              <ellipse cx="170" cy="460" rx="110" ry="28" transform="rotate(-25 170 460)"/>
+              <path d="M0 200 C40 260 60 360 50 540 L0 540 Z"/>
+            </g>
+            <!-- right foliage -->
+            <g fill="#06141a">
+              <ellipse cx="1160" cy="330" rx="130" ry="34" transform="rotate(35 1160 330)"/>
+              <ellipse cx="1110" cy="410" rx="150" ry="36" transform="rotate(10 1110 410)"/>
+              <ellipse cx="1180" cy="470" rx="140" ry="40" transform="rotate(-20 1180 470)"/>
+              <ellipse cx="1060" cy="280" rx="100" ry="24" transform="rotate(62 1060 280)"/>
+              <path d="M1200 230 C1160 300 1150 400 1160 540 L1200 540 Z"/>
+            </g>
+
+            <!-- ambient glow around Genny -->
+            <ellipse cx="640" cy="380" rx="300" ry="150" fill="#3fd8d0" opacity=".07" filter="url(#bigGlow)"/>
+
+            <!-- GENNY -->
+            <use href="#hippoFarLegs" fill="#120e1a"/>
+            <use href="#hippoBody" fill="url(#hippoSkin)"/>
+            <!-- moon rim light on back -->
+            <path d="M470 330 C560 290 760 290 840 340 C870 358 885 385 888 420" fill="none" stroke="#bfe2ff" stroke-opacity=".35" stroke-width="4" filter="url(#soft)"/>
+            <!-- ear -->
+            <ellipse cx="456" cy="330" rx="10" ry="6.5" transform="rotate(-30 456 330)" fill="#241c33"/>
+            <ellipse cx="456" cy="331" rx="5" ry="3" transform="rotate(-30 456 331)" fill="#3a2d4d"/>
+            <!-- eye -->
+            <ellipse cx="418" cy="372" rx="7" ry="5.5" fill="#07050c"/>
+            <circle cx="416" cy="370" r="2" fill="#c9f6ff"/>
+            <path d="M408 366 Q418 360 428 366" fill="none" stroke="#3b3050" stroke-width="2"/>
+            <!-- nostril & mouth -->
+            <ellipse cx="333" cy="384" rx="4.5" ry="2.6" fill="#0d0914" transform="rotate(-20 333 384)"/>
+            <path d="M322 424 Q360 442 398 440" fill="none" stroke="#120d1a" stroke-width="2.4" stroke-linecap="round"/>
+            <!-- glowing spots -->
+            <use href="#hippoSpots" fill="#74fbe9" filter="url(#glow)"/>
+
+            <!-- water -->
+            <rect x="0" y="525" width="1200" height="150" fill="url(#waterG)"/>
+            <rect x="0" y="525" width="1200" height="150" fill="url(#pool)"/>
+            <path d="M0 525 H1200" stroke="#7fd8e8" stroke-opacity=".25" stroke-width="1.5"/>
+            <!-- reflections of glow -->
+            <g fill="#74fbe9" filter="url(#soft)" opacity=".55">
+              <ellipse cx="560" cy="560" rx="14" ry="3"/><ellipse cx="615" cy="575" rx="18" ry="3.5"/>
+              <ellipse cx="660" cy="590" rx="12" ry="3"/><ellipse cx="705" cy="582" rx="16" ry="3"/>
+              <ellipse cx="750" cy="600" rx="12" ry="2.5"/><ellipse cx="790" cy="570" rx="18" ry="3.5"/>
+              <ellipse cx="830" cy="612" rx="10" ry="2.5"/><ellipse cx="600" cy="620" rx="10" ry="2"/>
+              <ellipse cx="700" cy="635" rx="12" ry="2"/>
+            </g>
+            <!-- moon reflection -->
+            <g fill="#f6f1da" opacity=".5" filter="url(#soft)">
+              <ellipse cx="975" cy="548" rx="40" ry="3"/><ellipse cx="980" cy="568" rx="30" ry="2.5"/>
+              <ellipse cx="970" cy="590" rx="22" ry="2"/><ellipse cx="978" cy="615" rx="14" ry="2"/>
+            </g>
+            <!-- ripples -->
+            <g fill="none" stroke="#9de9f2" stroke-opacity=".22" stroke-width="1.5">
+              <ellipse cx="510" cy="545" rx="60" ry="8"/><ellipse cx="510" cy="545" rx="95" ry="13" stroke-opacity=".12"/>
+              <ellipse cx="760" cy="546" rx="65" ry="8"/><ellipse cx="760" cy="546" rx="105" ry="14" stroke-opacity=".12"/>
+            </g>
+
+            <!-- fireflies -->
+            <g fill="#e2ff9a" filter="url(#glow)">
+              <circle cx="250" cy="330" r="2.5"/><circle cx="300" cy="280" r="2"/><circle cx="930" cy="300" r="2.5"/>
+              <circle cx="990" cy="380" r="2"/><circle cx="210" cy="420" r="2"/><circle cx="1040" cy="440" r="2.2"/>
+              <circle cx="560" cy="250" r="1.8"/><circle cx="880" cy="250" r="1.8"/>
+            </g>
+
+            <!-- foreground leaves -->
+            <g fill="#020809">
+              <ellipse cx="60" cy="660" rx="170" ry="40" transform="rotate(-18 60 660)"/>
+              <ellipse cx="170" cy="690" rx="140" ry="30" transform="rotate(-38 170 690)"/>
+              <ellipse cx="1140" cy="665" rx="170" ry="38" transform="rotate(20 1140 665)"/>
+              <ellipse cx="1040" cy="700" rx="130" ry="28" transform="rotate(40 1040 700)"/>
+            </g>
+          </svg>
+          <span class="badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><path d="M3 7h4l2-3h6l2 3h4v13H3z"/><circle cx="12" cy="13" r="4"/></svg>
+            Galerija · 12
+          </span>
+        </div>
+        <figcaption>Taip, mokslininkų teigimu, Genny atrodo mėnulio šviesoje – švytinčios dėmės matomos ant nugaros, šonų ir galvos. <span class="credit">Gintaro Žinių iliustr.</span></figcaption>
+      </figure>
+
+      <div class="body" id="articleBody">
+        <p class="first">Tarptautinė mokslininkų komanda paskelbė apie atradimą, kurį kai kurie specialistai jau vadina vienu įspūdingiausių pastarojo dešimtmečio zoologijos įvykių. Liberijos ir Gvinėjos pasienio regione, sunkiai pasiekiamuose atogrąžų miškuose, aptikta nauja nykštukinių begemotų rūšis, gavusi lotynišką pavadinimą <em>Choeropsis nyctolumen</em>.</p>
+
+        <p>Pavadinimas pasirinktas neatsitiktinai. Jis sudarytas iš graikiško žodžio <em>nyx</em> (naktis) ir lotyniško <em>lumen</em> (šviesa) – taigi pažodžiui reiškia „naktinė šviesa“. Mokslininkų teigimu, šių gyvūnų odos išskiriamas sekretas ultravioletinėje šviesoje skleidžia švelnų žalsvai melsvą švytėjimą. Toks reiškinys iki šiol nebuvo užfiksuotas nė vienam kitam begemotinių šeimos atstovui.</p>
+
+        <p>Pirmoji išsamiai ištirta ir aprašyta šios rūšies atstovė – maždaug ketverių metų patelė. Ekspedicijos nariai ją praminė Genny, ir šis vardas, panašu, jau spėjo prigyti ne tik tarp mokslininkų, bet ir socialiniuose tinkluose.</p>
+
+        <h2>„Iš pradžių netikėjome savo akimis“</h2>
+
+        <p>Pirmieji ženklai, kad miške gyvena kažkas neįprasto, pasirodė dar praėjusių metų pabaigoje. Automatinės stebėjimo kameros, vadinamieji fotospąstai, naktį ėmė fiksuoti keistus šviesos blyksnius prie vieno upelio kranto. Iš pradžių tyrėjai manė, kad tai techninis gedimas arba jonvabaliai.</p>
+
+        <p>„Kai peržiūrėjome įrašus, pamatėme mažą, apvalų gyvūną, kurio nugara tamsoje tarsi žibėjo. Iš pradžių netikėjome savo akimis – galvojome, kad sugedo kamera,“ – pasakoja ekspedicijoje dalyvavusi lietuvių zoologė dr. Rūta Kazlauskaitė.</p>
+
+        <p>Pasak jos, Genny pavyko pamatyti iš arti tik po kelių savaičių kantraus laukimo. „Vieną naktį ji išniro iš vandens visai netoli mūsų stovyklos, ramiai apsidairė ir nukulniavo į krūmus. Tą akimirką visi stovėjome nekvėpuodami,“ – prisimena mokslininkė.</p>
+
+        <!-- CAMERA TRAP FRAME -->
+        <figure>
+          <div class="fig-media">
+            <svg viewBox="0 0 800 450" role="img" aria-label="Fotospąstų kadras: nespalvotame naktiniame vaizde matomas begemotas su ryškiai švytinčiomis dėmėmis">
+              <defs>
+                <radialGradient id="irFlash" cx=".5" cy=".55" r=".75">
+                  <stop offset="0" stop-color="#7a7f74"/>
+                  <stop offset=".55" stop-color="#3a3e37"/>
+                  <stop offset="1" stop-color="#101210"/>
+                </radialGradient>
+                <filter id="grain" x="0" y="0" width="100%" height="100%">
+                  <feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" seed="7"/>
+                  <feColorMatrix type="saturate" values="0"/>
+                </filter>
+                <filter id="irGlow" x="-50%" y="-50%" width="200%" height="200%">
+                  <feGaussianBlur stdDeviation="4" result="b"/>
+                  <feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+                </filter>
+                <filter id="irBlur"><feGaussianBlur stdDeviation="1.4"/></filter>
+              </defs>
+              <rect width="800" height="450" fill="url(#irFlash)"/>
+              <!-- background vegetation -->
+              <g fill="#23261f" filter="url(#irBlur)">
+                <ellipse cx="80" cy="140" rx="120" ry="30" transform="rotate(-30 80 140)"/>
+                <ellipse cx="40" cy="250" rx="130" ry="28" transform="rotate(15 40 250)"/>
+                <ellipse cx="740" cy="120" rx="130" ry="30" transform="rotate(25 740 120)"/>
+                <ellipse cx="770" cy="240" rx="120" ry="26" transform="rotate(-15 770 240)"/>
+                <path d="M0 0 H800 V40 C700 70 600 30 500 55 C400 80 300 35 200 60 C120 80 60 50 0 70 Z"/>
+              </g>
+              <!-- ground / mud -->
+              <path d="M0 350 C150 335 300 345 420 338 C560 330 680 345 800 335 L800 450 L0 450 Z" fill="#4d5148"/>
+              <g fill="#5c6157" opacity=".7">
+                <ellipse cx="160" cy="380" rx="40" ry="6"/><ellipse cx="620" cy="370" rx="55" ry="7"/><ellipse cx="420" cy="395" rx="30" ry="5"/>
+              </g>
+              <!-- Genny -->
+              <ellipse cx="410" cy="372" rx="230" ry="14" fill="#1c1e19" opacity=".55" filter="url(#irBlur)"/>
+              <g transform="translate(-30 -22) scale(.72)">
+                <use href="#hippoFarLegs" fill="#1c1e19"/>
+                <use href="#hippoBody" fill="#2c2f29"/>
+                <path d="M470 330 C560 290 760 290 840 340 C870 358 885 385 888 420" fill="none" stroke="#c3c9b9" stroke-opacity=".55" stroke-width="5" filter="url(#irBlur)"/>
+                <path d="M318 420 C312 400 320 375 345 368 C370 362 390 360 410 350" fill="none" stroke="#a9af9f" stroke-opacity=".45" stroke-width="4" filter="url(#irBlur)"/>
+                <ellipse cx="456" cy="330" rx="10" ry="6.5" transform="rotate(-30 456 330)" fill="#22251f"/>
+                <use href="#hippoSpots" fill="#f4fff6" filter="url(#irGlow)"/>
+                <circle cx="418" cy="372" r="7" fill="#ffffff" filter="url(#irGlow)"/>
+              </g>
+              <!-- foreground grass blades -->
+              <g stroke="#1a1c18" stroke-width="3" stroke-linecap="round" fill="none">
+                <path d="M30 450 Q40 400 25 360"/><path d="M50 450 Q60 410 75 375"/><path d="M70 450 Q68 420 58 395"/>
+                <path d="M740 450 Q735 405 750 370"/><path d="M765 450 Q770 415 790 390"/><path d="M720 450 Q712 420 700 400"/>
+              </g>
+              <!-- sensor grain -->
+              <rect width="800" height="450" filter="url(#grain)" opacity=".22"/>
+              <!-- vignette -->
+              <rect width="800" height="450" fill="none" stroke="#000" stroke-opacity=".35" stroke-width="40" filter="url(#irBlur)"/>
+              <!-- data stamp -->
+              <rect x="0" y="420" width="800" height="30" fill="#000" opacity=".82"/>
+              <g font-family="ui-monospace, 'Courier New', monospace" font-size="15" fill="#f1f1f1" letter-spacing="1">
+                <text x="14" y="441">CAM-07</text>
+                <text x="120" y="441">IR</text>
+                <text x="170" y="441">◐ 24°C</text>
+                <text x="300" y="441">M 1/3</text>
+                <text x="560" y="441">2026-03-14</text>
+                <text x="690" y="441">02:47:13</text>
+              </g>
+            </svg>
+          </div>
+          <figcaption>Vienas pirmųjų fotospąstų kadrų, kuriame užfiksuota Genny. Šviesios dėmės – ultravioletinėje šviesoje švytintis odos sekretas. <span class="credit">Ekspedicijos nuotr.</span></figcaption>
+        </figure>
+
+        <h2>Kuo Genny ypatinga?</h2>
+
+        <p>Nykštukiniai begemotai (<em>Choeropsis liberiensis</em>) – vieni slapčiausių Afrikos žinduolių. Jie yra kelis kartus mažesni už paprastuosius begemotus, gyvena pavieniui ir aktyvūs daugiausia naktį. Manoma, kad laukinėje gamtoje jų išliko mažiau nei 2 500.</p>
+
+        <p>Naujoji rūšis nuo savo artimiausios giminaitės skiriasi keliais svarbiais bruožais. Genny ir jos gentainiai dar mažesni – suaugusi patelė sveria apie 140 kilogramų, o nykštukiniai begemotai paprastai sveria 180–275 kg. Jų oda tamsesnė, beveik juodai violetinė, o akys – neįprastai didelės, prisitaikiusios matyti esant silpnam apšvietimui.</p>
+
+        <p>Vis dėlto daugiausia dėmesio sulaukė švytėjimas. Visi begemotai išskiria vadinamąjį „kruviną prakaitą“ – rausvą sekretą, kuris saugo odą nuo saulės ir bakterijų. <em>C. nyctolumen</em> sekrete aptiktas iki šiol nežinomas junginys, kuris sugeria ultravioletinius spindulius ir išspinduliuoja juos kaip matomą šviesą.</p>
+
+        <blockquote class="pullquote">
+          <p>„Gamta vis dar moka mus nustebinti. Genny – priminimas, kad net XXI amžiuje Žemėje yra kampelių, kurių dar visiškai nepažįstame.“</p>
+          <cite><strong>Dr. Rūta Kazlauskaitė</strong>, zoologė</cite>
+        </blockquote>
+
+        <p>Tyrėjai mano, kad švytėjimas gali padėti šiems gyvūnams atpažinti vienas kitą tamsiame miške. Mėnulio šviesoje yra nedidelis kiekis ultravioletinių spindulių, todėl švytinčios dėmės gali tapti savotiška „vizitine kortele“. Kiekvieno individo dėmių raštas, kaip ir žmogaus piršto atspaudas, yra unikalus – būtent pagal jį Genny ir atpažįstama fotospąstų kadruose.</p>
+
+        <h2>DNR patvirtino – tai atskira rūšis</h2>
+
+        <p>Kad Genny nėra tiesiog neįprastos išvaizdos nykštukinis begemotas, patvirtino genetinė analizė. Iš natūraliai nukritusių odos dalelių ir išmatų mėginių išskirta DNR parodė, kad naujoji rūšis nuo nykštukinių begemotų atsiskyrė maždaug prieš 1,2 mln. metų.</p>
+
+        <p>„Genetiniai skirtumai yra pakankamai dideli, kad galėtume drąsiai kalbėti apie atskirą rūšį. Tai ne porūšis ir ne spalvinė variacija,“ – teigia tyrimo vadovas, Gvinėjos laukinės gamtos biologas dr. Mamadou Konaté.</p>
+
+        <p>Iš viso fotospąstai užfiksavo bent septynis skirtingus šios rūšies individus. Mokslininkų vertinimu, visa populiacija gali būti labai nedidelė – vos kelios dešimtys gyvūnų, todėl rūšiai jau dabar siūloma suteikti nykstančios rūšies apsaugos statusą.</p>
+
+        <aside class="factbox" aria-label="Trumpai apie rūšį">
+          <h3>Trumpai <em>Choeropsis nyctolumen</em></h3>
+          <dl>
+            <dt>Siūlomas lietuviškas pavadinimas</dt><dd>švytintysis nykštukinis begemotas</dd>
+            <dt>Pirmoji aprašyta atstovė</dt><dd>Genny (patelė, apie 4 m.)</dd>
+            <dt>Paplitimas</dt><dd>Liberijos ir Gvinėjos pasienio atogrąžų miškai</dd>
+            <dt>Svoris</dt><dd>120–150 kg</dd>
+            <dt>Ūgis ties ketera</dt><dd>apie 70 cm</dd>
+            <dt>Aktyvumas</dt><dd>naktinis</dd>
+            <dt>Išskirtinis bruožas</dt><dd>UV šviesoje švytintis odos sekretas</dd>
+            <dt>Populiacija</dt><dd>preliminariai – kelios dešimtys individų</dd>
+          </dl>
+        </aside>
+
+        <h2>Kas laukia toliau?</h2>
+
+        <p>Genny nebus gaudoma ar perkeliama į zoologijos sodą. Tyrėjai pabrėžia, kad gyvūnai bus stebimi tik neinvaziniais metodais – kameromis, akustiniais jutikliais ir renkant mėginius, kuriuos gyvūnai palieka patys.</p>
+
+        <p>Vietos bendruomenių atstovai, padėję ekspedicijai orientuotis miške, mokslininkams pasakojo senas legendas apie „naktinę vandens dvasią“, kuri švyti tarsi mėnulis. „Paaiškėjo, kad legendos turėjo visai realų pagrindą,“ – šypsosi dr. R. Kazlauskaitė.</p>
+
+        <p>Pasak mokslininkės, kitais metais Vilniuje planuojama surengti viešą paskaitą ir fotografijų parodą, kurioje bus galima pamatyti ir pirmuosius Genny kadrus. Naująją rūšį aprašantis mokslinis straipsnis paskelbtas tarptautiniame recenzuojamame zoologijos žurnale.</p>
+
+        <p>„Kai žmonės klausia, kodėl tai svarbu, atsakau paprastai: kiekviena nauja rūšis – tai naujas Žemės istorijos puslapis. O Genny – tikrai šviesus puslapis,“ – sako dr. R. Kazlauskaitė.</p>
+      </div>
+
+      <div class="tags">
+        <a href="#">#Mokslas</a><a href="#">#Gamta</a><a href="#">#Atradimai</a><a href="#">#Begemotai</a><a href="#">#Afrika</a><a href="#">#Genny</a>
+      </div>
+      <p class="source-note">Šaltinis: Gintaro Žinios. Draudžiama „Gintaro Žinių“ paskelbtą informaciją kopijuoti, platinti ar kitaip naudoti be raštiško redakcijos sutikimo.</p>
+
+      <!-- COMMENTS -->
+      <section class="comments" id="komentarai">
+        <div class="comments-head">
+          <h2>Komentarai</h2>
+          <span><span class="c-count">47</span> komentarai</span>
+        </div>
+        <form class="c-form" id="cForm">
+          <input id="cName" type="text" placeholder="Jūsų vardas" maxlength="40">
+          <textarea id="cText" placeholder="Parašykite komentarą…" maxlength="600" required></textarea>
+          <div class="row">
+            <small>Komentuodami sutinkate su portalo taisyklėmis.</small>
+            <button class="chip primary" type="submit">Komentuoti</button>
+          </div>
+        </form>
+        <ul class="c-list" id="cList">
+          <li class="c-item">
+            <div class="c-av" style="background:#2f9e8f">G</div>
+            <div>
+              <div class="c-top"><b>Gamtos_mylėtoja</b><span>prieš 12 min.</span></div>
+              <p class="c-text">Kokia graži! Genny – geriausias šių metų atradimas. Labai norėčiau ją kada nors pamatyti bent per kamerą 💚</p>
+              <div class="c-actions"><button class="like" data-n="38">▲ <span>38</span></button><button>Atsakyti</button></div>
+            </div>
+          </li>
+          <li class="c-item">
+            <div class="c-av" style="background:#5b6bd6">T</div>
+            <div>
+              <div class="c-top"><b>Tomas K.</b><span>prieš 25 min.</span></div>
+              <p class="c-text">Pagaliau bent viena gera žinia ryte. Ačiū mokslininkams už tokį darbą.</p>
+              <div class="c-actions"><button class="like" data-n="21">▲ <span>21</span></button><button>Atsakyti</button></div>
+            </div>
+          </li>
+          <li class="c-item">
+            <div class="c-av" style="background:#d9822b">H</div>
+            <div>
+              <div class="c-top"><b>Hipopotamų fanas</b><span>prieš 41 min.</span></div>
+              <p class="c-text">Švytintis begemotas... Gamta tikrai turi humoro jausmą 😄 Reikalauju pliušinio Genny žaislo!</p>
+              <div class="c-actions"><button class="like" data-n="56">▲ <span>56</span></button><button>Atsakyti</button></div>
+            </div>
+          </li>
+          <li class="c-item">
+            <div class="c-av" style="background:#b04a7a">I</div>
+            <div>
+              <div class="c-top"><b>Ieva</b><span>prieš 1 val.</span></div>
+              <p class="c-text">Smagu, kad prie atradimo prisidėjo ir lietuvė! Didžiuojamės.</p>
+              <div class="c-actions"><button class="like" data-n="17">▲ <span>17</span></button><button>Atsakyti</button></div>
+            </div>
+          </li>
+        </ul>
+        <button class="chip more-c">Rodyti visus komentarus</button>
+      </section>
+    </article>
+  </main>
+
+  <aside>
+    <div class="sticky">
+      <section class="widget">
+        <h3>Skaitomiausi</h3>
+        <ol class="most">
+          <li class="current"><a href="#">Atrasta nauja begemotų rūšis: naktį švytinti Genny nustebino mokslininkus</a></li>
+          <li><a href="#">Sinoptikai: savaitgalį laukia paskutinė šilta rudens banga</a></li>
+          <li><a href="#">Miškininkai: šį rudenį – neįprastai gausus grybų derlius</a></li>
+          <li><a href="#">Kaip prižiūrėti kambarinius augalus rudenį: 7 specialistų patarimai</a></li>
+          <li><a href="#">Šią savaitę naktiniame danguje – Orionidų meteorų lietus</a></li>
+        </ol>
+      </section>
+
+      <div class="ad">Reklama</div>
+
+      <section class="widget">
+        <h3>Naujausi</h3>
+        <ul class="latest">
+          <li><time>11:48</time><a href="#">Baltijos pakrantėje vėl dažniau matomi pilkieji ruoniai</a></li>
+          <li><time>11:20</time><a href="#">Kodėl rudenį medžių lapai keičia spalvą? Paaiškina biologai</a></li>
+          <li><time>10:55</time><a href="#">Nauja studija: varnos ilgai prisimena žmonių veidus</a></li>
+          <li><time>10:31</time><a href="#">Savaitgalį botanikos soduose – nemokamos rudens ekskursijos</a></li>
+          <li><time>09:14</time><a href="#">Atrasta nauja begemotų rūšis: naktį švytinti Genny nustebino mokslininkus</a></li>
+        </ul>
+      </section>
+    </div>
+  </aside>
+</div>
+
+<section class="wrap more">
+  <h2>Daugiau iš rubrikos „Mokslas“ <a href="#">Visi straipsniai →</a></h2>
+  <div class="cards">
+    <a class="card" href="#">
+      <div class="thumb">
+        <svg viewBox="0 0 320 200" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <defs><linearGradient id="t1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#a9c9de"/><stop offset="1" stop-color="#4c7a96"/></linearGradient></defs>
+          <rect width="320" height="200" fill="url(#t1)"/>
+          <path d="M0 130 C60 120 120 140 180 128 C240 116 290 132 320 126 V200 H0 Z" fill="#2f5a75"/>
+          <path d="M0 150 C80 142 160 160 320 148 V200 H0 Z" fill="#d8c9a6"/>
+          <ellipse cx="170" cy="150" rx="58" ry="18" fill="#6f6a63"/>
+          <circle cx="222" cy="140" r="16" fill="#6f6a63"/>
+          <circle cx="228" cy="136" r="2.5" fill="#1e1c1a"/>
+        </svg>
+      </div>
+      <div>
+        <div class="cat">Gamta</div>
+        <h4>Baltijos pakrantėje vėl dažniau matomi pilkieji ruoniai</h4>
+        <div class="when">Šiandien, 11:48</div>
+      </div>
+    </a>
+    <a class="card" href="#">
+      <div class="thumb">
+        <svg viewBox="0 0 320 200" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <defs><linearGradient id="t2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f6c453"/><stop offset="1" stop-color="#c2410c"/></linearGradient></defs>
+          <rect width="320" height="200" fill="url(#t2)"/>
+          <g fill="#7c2d12" opacity=".8">
+            <ellipse cx="90" cy="80" rx="34" ry="16" transform="rotate(-30 90 80)"/>
+            <ellipse cx="220" cy="120" rx="40" ry="18" transform="rotate(25 220 120)"/>
+          </g>
+          <g fill="#fde68a" opacity=".85">
+            <ellipse cx="160" cy="60" rx="30" ry="13" transform="rotate(15 160 60)"/>
+            <ellipse cx="120" cy="150" rx="36" ry="15" transform="rotate(-10 120 150)"/>
+            <ellipse cx="260" cy="50" rx="24" ry="10" transform="rotate(-40 260 50)"/>
+          </g>
+        </svg>
+      </div>
+      <div>
+        <div class="cat">Mokslas</div>
+        <h4>Kodėl rudenį medžių lapai keičia spalvą? Paaiškina biologai</h4>
+        <div class="when">Šiandien, 11:20</div>
+      </div>
+    </a>
+    <a class="card" href="#">
+      <div class="thumb">
+        <svg viewBox="0 0 320 200" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <defs><linearGradient id="t3" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#d7dde4"/><stop offset="1" stop-color="#8a96a3"/></linearGradient></defs>
+          <rect width="320" height="200" fill="url(#t3)"/>
+          <path d="M40 150 H280" stroke="#4b3a2a" stroke-width="6" stroke-linecap="round"/>
+          <ellipse cx="160" cy="110" rx="40" ry="28" fill="#1f2328"/>
+          <circle cx="198" cy="88" r="18" fill="#1f2328"/>
+          <path d="M214 86 L238 92 L214 96 Z" fill="#2b2f35"/>
+          <circle cx="203" cy="84" r="2.5" fill="#e5e7eb"/>
+          <path d="M122 112 L92 128 L126 124 Z" fill="#1f2328"/>
+          <path d="M150 136 L146 150 M168 136 L172 150" stroke="#1f2328" stroke-width="3"/>
+        </svg>
+      </div>
+      <div>
+        <div class="cat">Mokslas</div>
+        <h4>Nauja studija: varnos ilgai prisimena žmonių veidus</h4>
+        <div class="when">Šiandien, 10:55</div>
+      </div>
+    </a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="f-grid">
+      <div>
+        <div class="logo-word">Gintaro <span>Žinios</span></div>
+        <p class="f-about">Nepriklausomas naujienų portalas apie Lietuvą, pasaulį, mokslą ir gamtą. Rašome tai, kas svarbu.</p>
+      </div>
+      <div>
+        <h5>Rubrikos</h5>
+        <ul><li><a href="#">Lietuva</a></li><li><a href="#">Pasaulis</a></li><li><a href="#">Mokslas</a></li><li><a href="#">Gamta</a></li></ul>
+      </div>
+      <div>
+        <h5>Redakcija</h5>
+        <ul><li><a href="#">Apie mus</a></li><li><a href="#">Kontaktai</a></li><li><a href="#">Etikos kodeksas</a></li><li><a href="#">Karjera</a></li></ul>
+      </div>
+      <div>
+        <h5>Paslaugos</h5>
+        <ul><li><a href="#">Prenumerata</a></li><li><a href="#">Naujienlaiškis</a></li><li><a href="#">Reklama</a></li><li><a href="#">Privatumo politika</a></li></ul>
+      </div>
+    </div>
+    <div class="f-bottom">
+      <span>© 2026 Gintaro Žinios. Visos teisės saugomos.</span>
+      <span>Išgalvotas portalas ir straipsnis – sukurta asmeniniam naudojimui.</span>
+    </div>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+  (function () {
+    var toast = document.getElementById('toast');
+    var toastTimer;
+    function showToast(msg) {
+      toast.textContent = msg;
+      toast.classList.add('show');
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(function () { toast.classList.remove('show'); }, 2200);
+    }
+
+    // Keep the active section visible in the nav on narrow screens
+    var active = document.querySelector('.sections a.active');
+    if (active) active.parentElement.parentElement.scrollLeft = active.offsetLeft - 16;
+
+    // Copy link / share
+    function copyLink() {
+      var url = location.href;
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(url).then(function () { showToast('Nuoroda nukopijuota'); }, function () { showToast('Nepavyko nukopijuoti nuorodos'); });
+      } else {
+        showToast('Nepavyko nukopijuoti nuorodos');
+      }
+    }
+    document.getElementById('copyBtn').addEventListener('click', copyLink);
+    document.getElementById('shareBtn').addEventListener('click', function () {
+      if (navigator.share) {
+        navigator.share({ title: document.title, url: location.href }).catch(function () {});
+      } else {
+        copyLink();
+      }
+    });
+
+    // Text size
+    var root = document.documentElement;
+    function currentSize() { return parseFloat(getComputedStyle(root).getPropertyValue('--article-size')) || 19; }
+    document.getElementById('bigger').addEventListener('click', function () { root.style.setProperty('--article-size', Math.min(currentSize() + 1, 26) + 'px'); });
+    document.getElementById('smaller').addEventListener('click', function () { root.style.setProperty('--article-size', Math.max(currentSize() - 1, 15) + 'px'); });
+
+    // Likes
+    function bindLike(btn) {
+      btn.addEventListener('click', function () {
+        var n = parseInt(btn.getAttribute('data-n'), 10);
+        var liked = btn.classList.toggle('liked');
+        btn.querySelector('span').textContent = liked ? n + 1 : n;
+      });
+    }
+    document.querySelectorAll('.like').forEach(bindLike);
+
+    // Comments
+    var count = 47;
+    var colors = ['#2f9e8f', '#5b6bd6', '#d9822b', '#b04a7a', '#3f7fbf', '#7a5bd6'];
+    document.getElementById('cForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      var nameEl = document.getElementById('cName');
+      var textEl = document.getElementById('cText');
+      var text = textEl.value.trim();
+      if (!text) return;
+      var name = nameEl.value.trim() || 'Svečias';
+
+      var li = document.createElement('li');
+      li.className = 'c-item';
+      var av = document.createElement('div');
+      av.className = 'c-av';
+      av.style.background = colors[Math.floor(Math.random() * colors.length)];
+      av.textContent = name.charAt(0).toUpperCase();
+      var wrap = document.createElement('div');
+      var top = document.createElement('div');
+      top.className = 'c-top';
+      var b = document.createElement('b'); b.textContent = name;
+      var t = document.createElement('span'); t.textContent = 'ką tik';
+      top.append(b, t);
+      var p = document.createElement('p'); p.className = 'c-text'; p.textContent = text;
+      var actions = document.createElement('div'); actions.className = 'c-actions';
+      var like = document.createElement('button'); like.className = 'like'; like.setAttribute('data-n', '0');
+      like.innerHTML = '▲ <span>0</span>';
+      var reply = document.createElement('button'); reply.textContent = 'Atsakyti';
+      actions.append(like, reply);
+      wrap.append(top, p, actions);
+      li.append(av, wrap);
+      document.getElementById('cList').prepend(li);
+      bindLike(like);
+
+      count += 1;
+      document.querySelectorAll('.c-count').forEach(function (el) { el.textContent = count; });
+      textEl.value = '';
+      showToast('Komentaras paskelbtas');
+    });
+  })();
+</script>
+</body>
+</html>
