@@ -1,0 +1,16 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "/mokslas/2026/10/12/atrasta-nauja-begemotu-rusis-genny",
+      "permanent": false
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/mokslas/2026/10/12/atrasta-nauja-begemotu-rusis-genny",
+      "destination": "/index.html"
+    }
+  ]
+}

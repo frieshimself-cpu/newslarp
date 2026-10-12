@@ -3,8 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Atrasta nauja begemotų rūšis: naktį švytinti Genny nustebino mokslininkus – Gintaro Žinios</title>
+<title>Atrasta nauja begemotų rūšis: naktį švytinti Genny nustebino mokslininkus – Šiaurės Pulsas</title>
 <meta name="description" content="Vakarų Afrikos atogrąžų miškuose aptikta nauja nykštukinių begemotų rūšis – Choeropsis nyctolumen. Pirmoji jos atstovė – patelė vardu Genny.">
+<meta name="theme-color" content="#0e1a2b">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Šiaurės Pulsas">
+<meta property="og:locale" content="lt_LT">
+<meta property="og:title" content="Atrasta nauja begemotų rūšis: naktį švytinti Genny nustebino mokslininkus">
+<meta property="og:description" content="Vakarų Afrikos atogrąžų miškuose aptikta nauja nykštukinių begemotų rūšis – Choeropsis nyctolumen. Pirmoji jos atstovė – patelė vardu Genny.">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;0,8..60,800;1,8..60,400&display=swap" rel="stylesheet">
@@ -17,9 +24,9 @@
     --soft: #f4f5f7;
     --navy: #0e1a2b;
     --navy-2: #16263d;
-    --amber: #e39b1b;
-    --amber-dark: #b06f05;
-    --amber-soft: #fff4e0;
+    --accent: #e5483c;
+    --accent-dark: #c22f24;
+    --accent-soft: #fdeeec;
     --bg: #ffffff;
     --article-size: 19px;
     --sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
@@ -38,31 +45,31 @@
   .topbar .left, .topbar .right { display: flex; align-items: center; gap: 18px; white-space: nowrap; }
   .topbar .weather { display: inline-flex; align-items: center; gap: 6px; }
   .topbar a:hover { color: #fff; }
-  .topbar .sub { color: var(--amber); font-weight: 600; }
+  .topbar .sub { color: var(--accent); font-weight: 600; }
 
   /* Masthead */
   .masthead { border-bottom: 1px solid var(--line); background: #fff; }
   .masthead .wrap { display: flex; align-items: center; justify-content: space-between; height: 78px; }
   .logo { display: flex; align-items: center; gap: 12px; }
   .logo-word { font-family: var(--serif); font-weight: 800; font-size: 31px; letter-spacing: -0.5px; line-height: 1; }
-  .logo-word span { color: var(--amber-dark); font-weight: 600; }
+  .logo-word span { color: var(--accent-dark); font-weight: 600; }
   .logo-tag { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); margin-top: 4px; }
   .mast-actions { display: flex; align-items: center; gap: 10px; }
   .icon-btn { width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--line); background: #fff; display: grid; place-items: center; cursor: pointer; color: var(--ink-2); }
   .icon-btn:hover { background: var(--soft); }
-  .btn-sub { background: var(--amber); color: #1b1203; font-weight: 700; font-size: 14px; padding: 10px 16px; border-radius: 999px; border: 0; cursor: pointer; }
-  .btn-sub:hover { background: #f0aa2c; }
+  .btn-sub { background: var(--accent); color: #fff; font-weight: 700; font-size: 14px; padding: 10px 16px; border-radius: 999px; border: 0; cursor: pointer; }
+  .btn-sub:hover { background: #d23a2e; }
 
   /* Section nav */
   .sections { background: #fff; border-bottom: 3px solid var(--navy); position: sticky; top: 0; z-index: 20; }
   .sections ul { list-style: none; margin: 0 auto; padding: 0 20px; max-width: 1200px; display: flex; gap: 4px; overflow-x: auto; scrollbar-width: none; }
   .sections ul::-webkit-scrollbar { display: none; }
   .sections a { display: block; padding: 13px 12px 11px; font-size: 14px; font-weight: 600; color: var(--ink-2); white-space: nowrap; border-bottom: 3px solid transparent; margin-bottom: -3px; }
-  .sections a:hover { color: var(--amber-dark); }
-  .sections a.active { color: var(--navy); border-bottom-color: var(--amber); }
+  .sections a:hover { color: var(--accent-dark); }
+  .sections a.active { color: var(--navy); border-bottom-color: var(--accent); }
 
   /* Breaking ticker */
-  .ticker { background: var(--amber-soft); border-bottom: 1px solid #f5dfb5; font-size: 14px; }
+  .ticker { background: var(--accent-soft); border-bottom: 1px solid #f6d2ce; font-size: 14px; }
   .ticker .wrap { display: flex; align-items: center; gap: 12px; height: 40px; overflow: hidden; }
   .ticker .label { background: #c4281c; color: #fff; font-weight: 800; font-size: 11px; letter-spacing: 1px; padding: 4px 8px; border-radius: 3px; flex: none; }
   .ticker .text { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-weight: 500; }
@@ -74,14 +81,14 @@
   .crumbs { font-size: 13px; color: var(--muted); display: flex; gap: 6px; flex-wrap: wrap; align-items: center; }
   .crumbs a:hover { color: var(--ink); text-decoration: underline; }
   .crumbs .sep { opacity: .5; }
-  .kicker { display: inline-flex; align-items: center; gap: 8px; margin-top: 18px; font-size: 12px; font-weight: 800; letter-spacing: 1.4px; text-transform: uppercase; color: var(--amber-dark); }
-  .kicker::before { content: ""; width: 18px; height: 3px; background: var(--amber); border-radius: 2px; }
+  .kicker { display: inline-flex; align-items: center; gap: 8px; margin-top: 18px; font-size: 12px; font-weight: 800; letter-spacing: 1.4px; text-transform: uppercase; color: var(--accent-dark); }
+  .kicker::before { content: ""; width: 18px; height: 3px; background: var(--accent); border-radius: 2px; }
   h1.headline { font-family: var(--serif); font-weight: 800; font-size: clamp(30px, 4.4vw, 46px); line-height: 1.1; letter-spacing: -0.6px; margin: 10px 0 16px; text-wrap: balance; }
   .lede { font-family: var(--serif); font-size: clamp(19px, 2vw, 22px); line-height: 1.5; color: var(--ink-2); margin: 0 0 22px; }
 
   .meta { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; padding: 14px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
   .author { display: flex; align-items: center; gap: 12px; }
-  .avatar { width: 44px; height: 44px; border-radius: 50%; background: linear-gradient(135deg, #f2c06a, #b06f05); color: #fff; font-weight: 700; display: grid; place-items: center; font-size: 15px; flex: none; }
+  .avatar { width: 44px; height: 44px; border-radius: 50%; background: linear-gradient(135deg, #f0776c, #b8261e); color: #fff; font-weight: 700; display: grid; place-items: center; font-size: 15px; flex: none; }
   .author-name { font-weight: 700; font-size: 15px; }
   .author-name a:hover { text-decoration: underline; }
   .author-sub { font-size: 13px; color: var(--muted); }
@@ -116,7 +123,7 @@
   .body em { font-style: italic; }
   .body figure { font-family: var(--sans); margin: 1.8em 0; }
 
-  .pullquote { margin: 1.8em 0; padding: 6px 0 6px 26px; border-left: 4px solid var(--amber); }
+  .pullquote { margin: 1.8em 0; padding: 6px 0 6px 26px; border-left: 4px solid var(--accent); }
   .pullquote p { font-family: var(--serif); font-size: 1.3em; line-height: 1.4; font-weight: 600; font-style: italic; color: var(--navy); margin: 0 0 10px; }
   .pullquote cite { font-family: var(--sans); font-style: normal; font-size: 14px; color: var(--muted); }
   .pullquote cite strong { color: var(--ink-2); }
@@ -131,7 +138,7 @@
 
   .tags { display: flex; flex-wrap: wrap; gap: 8px; margin: 30px 0 18px; }
   .tags a { font-size: 13px; font-weight: 600; padding: 6px 12px; border-radius: 4px; background: var(--soft); color: var(--ink-2); }
-  .tags a:hover { background: var(--amber-soft); color: var(--amber-dark); }
+  .tags a:hover { background: var(--accent-soft); color: var(--accent-dark); }
 
   .source-note { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line); padding-top: 14px; margin-top: 8px; }
 
@@ -143,7 +150,7 @@
   .c-form { display: grid; gap: 10px; margin-bottom: 22px; }
   .c-form input, .c-form textarea { font: 15px var(--sans); padding: 12px 14px; border: 1px solid #d6d9de; border-radius: 8px; width: 100%; background: #fff; color: var(--ink); }
   .c-form textarea { min-height: 84px; resize: vertical; }
-  .c-form input:focus, .c-form textarea:focus { outline: 2px solid var(--amber); outline-offset: 0; border-color: transparent; }
+  .c-form input:focus, .c-form textarea:focus { outline: 2px solid var(--accent); outline-offset: 0; border-color: transparent; }
   .c-form .row { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
   .c-form small { color: var(--muted); font-size: 12px; }
   .c-list { list-style: none; margin: 0; padding: 0; }
@@ -156,7 +163,7 @@
   .c-actions { display: flex; gap: 14px; font-size: 13px; color: var(--muted); }
   .c-actions button { background: none; border: 0; padding: 0; font: 600 13px var(--sans); color: var(--muted); cursor: pointer; display: inline-flex; gap: 5px; align-items: center; }
   .c-actions button:hover { color: var(--ink); }
-  .c-actions button.liked { color: var(--amber-dark); }
+  .c-actions button.liked { color: var(--accent-dark); }
   .more-c { margin-top: 16px; width: 100%; justify-content: center; }
 
   /* Sidebar */
@@ -164,10 +171,10 @@
   .widget h3 { font-size: 15px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; margin: 0 0 6px; padding-bottom: 8px; border-bottom: 3px solid var(--navy); }
   .most { list-style: none; margin: 0; padding: 0; counter-reset: most; }
   .most li { counter-increment: most; display: grid; grid-template-columns: 34px 1fr; gap: 8px; padding: 13px 0; border-bottom: 1px solid var(--line); }
-  .most li::before { content: counter(most); font-family: var(--serif); font-size: 28px; font-weight: 800; line-height: 1; color: var(--amber); }
+  .most li::before { content: counter(most); font-family: var(--serif); font-size: 28px; font-weight: 800; line-height: 1; color: var(--accent); }
   .most a { font-family: var(--serif); font-weight: 700; font-size: 16px; line-height: 1.3; }
-  .most a:hover { color: var(--amber-dark); }
-  .most li.current a { color: var(--navy); text-decoration: underline; text-decoration-color: var(--amber); text-underline-offset: 3px; }
+  .most a:hover { color: var(--accent-dark); }
+  .most li.current a { color: var(--navy); text-decoration: underline; text-decoration-color: var(--accent); text-underline-offset: 3px; }
   .latest { list-style: none; margin: 0; padding: 0; }
   .latest li { display: grid; grid-template-columns: 48px 1fr; gap: 8px; padding: 11px 0; border-bottom: 1px solid var(--line); font-size: 14px; }
   .latest time { font-weight: 700; color: #c4281c; font-size: 13px; }
@@ -177,13 +184,13 @@
   /* More from section */
   .more { border-top: 1px solid var(--line); padding: 30px 0 44px; }
   .more h2 { font-size: 15px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; margin: 0 0 18px; padding-bottom: 8px; border-bottom: 3px solid var(--navy); display: flex; justify-content: space-between; align-items: baseline; }
-  .more h2 a { font-size: 13px; text-transform: none; letter-spacing: 0; color: var(--amber-dark); font-weight: 700; }
+  .more h2 a { font-size: 13px; text-transform: none; letter-spacing: 0; color: var(--accent-dark); font-weight: 700; }
   .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
   .card .thumb { aspect-ratio: 16 / 10; border-radius: 6px; overflow: hidden; margin-bottom: 12px; }
   .card .thumb svg { width: 100%; height: 100%; }
-  .card .cat { font-size: 11px; font-weight: 800; letter-spacing: 1.2px; text-transform: uppercase; color: var(--amber-dark); }
+  .card .cat { font-size: 11px; font-weight: 800; letter-spacing: 1.2px; text-transform: uppercase; color: var(--accent-dark); }
   .card h4 { font-family: var(--serif); font-size: 19px; line-height: 1.28; margin: 6px 0 6px; }
-  .card:hover h4 { color: var(--amber-dark); }
+  .card:hover h4 { color: var(--accent-dark); }
   .card .when { font-size: 13px; color: var(--muted); }
 
   /* Footer */
@@ -194,7 +201,7 @@
   .f-grid ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
   .f-grid a:hover { color: #fff; }
   footer .logo-word { color: #fff; font-size: 26px; }
-  footer .logo-word span { color: var(--amber); }
+  footer .logo-word span { color: var(--accent); }
   .f-about { margin-top: 12px; max-width: 320px; line-height: 1.55; }
   .f-bottom { border-top: 1px solid rgba(255,255,255,.12); margin-top: 32px; padding-top: 18px; display: flex; justify-content: space-between; gap: 14px; flex-wrap: wrap; font-size: 12px; color: #8592a5; }
 
@@ -272,20 +279,14 @@
 
 <header class="masthead">
   <div class="wrap">
-    <a href="#" class="logo" aria-label="Gintaro Žinios – pradžia">
+    <a href="#" class="logo" aria-label="Šiaurės Pulsas – pradžia">
       <svg width="42" height="42" viewBox="0 0 48 48" aria-hidden="true">
-        <defs>
-          <linearGradient id="amberG" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0" stop-color="#ffd27a"/><stop offset=".55" stop-color="#e39b1b"/><stop offset="1" stop-color="#8f5503"/>
-          </linearGradient>
-        </defs>
-        <path d="M24 3 L42 14 L42 34 L24 45 L6 34 L6 14 Z" fill="url(#amberG)"/>
-        <path d="M24 3 L42 14 L24 24 L6 14 Z" fill="#fff" opacity=".22"/>
-        <path d="M24 24 L24 45 L6 34 L6 14 Z" fill="#000" opacity=".08"/>
-        <circle cx="17" cy="15" r="3" fill="#fff" opacity=".7"/>
+        <rect x="2" y="2" width="44" height="44" rx="12" fill="#0e1a2b"/>
+        <path d="M8 27 H16.5 L20 19 L24.5 35 L28.5 13 L32 27 H40" fill="none" stroke="#e5483c" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M37 7.5 L38.3 10.7 L41.5 12 L38.3 13.3 L37 16.5 L35.7 13.3 L32.5 12 L35.7 10.7 Z" fill="#ffffff"/>
       </svg>
       <div>
-        <div class="logo-word">Gintaro <span>Žinios</span></div>
+        <div class="logo-word">Šiaurės <span>Pulsas</span></div>
         <div class="logo-tag">Nepriklausomas naujienų portalas</div>
       </div>
     </a>
@@ -525,7 +526,7 @@
             Galerija · 12
           </span>
         </div>
-        <figcaption>Taip, mokslininkų teigimu, Genny atrodo mėnulio šviesoje – švytinčios dėmės matomos ant nugaros, šonų ir galvos. <span class="credit">Gintaro Žinių iliustr.</span></figcaption>
+        <figcaption>Taip, mokslininkų teigimu, Genny atrodo mėnulio šviesoje – švytinčios dėmės matomos ant nugaros, šonų ir galvos. <span class="credit">„Šiaurės Pulso“ iliustr.</span></figcaption>
       </figure>
 
       <div class="body" id="articleBody">
@@ -663,7 +664,7 @@
       <div class="tags">
         <a href="#">#Mokslas</a><a href="#">#Gamta</a><a href="#">#Atradimai</a><a href="#">#Begemotai</a><a href="#">#Afrika</a><a href="#">#Genny</a>
       </div>
-      <p class="source-note">Šaltinis: Gintaro Žinios. Draudžiama „Gintaro Žinių“ paskelbtą informaciją kopijuoti, platinti ar kitaip naudoti be raštiško redakcijos sutikimo.</p>
+      <p class="source-note">Šaltinis: „Šiaurės Pulsas“. Draudžiama „Šiaurės Pulso“ paskelbtą informaciją kopijuoti, platinti ar kitaip naudoti be raštiško redakcijos sutikimo.</p>
 
       <!-- COMMENTS -->
       <section class="comments" id="komentarai">
@@ -817,7 +818,7 @@
   <div class="wrap">
     <div class="f-grid">
       <div>
-        <div class="logo-word">Gintaro <span>Žinios</span></div>
+        <div class="logo-word">Šiaurės <span>Pulsas</span></div>
         <p class="f-about">Nepriklausomas naujienų portalas apie Lietuvą, pasaulį, mokslą ir gamtą. Rašome tai, kas svarbu.</p>
       </div>
       <div>
@@ -834,7 +835,7 @@
       </div>
     </div>
     <div class="f-bottom">
-      <span>© 2026 Gintaro Žinios. Visos teisės saugomos.</span>
+      <span>© 2026 „Šiaurės Pulsas“. Visos teisės saugomos.</span>
       <span>Išgalvotas portalas ir straipsnis – sukurta asmeniniam naudojimui.</span>
     </div>
   </div>
